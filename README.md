@@ -1,7 +1,7 @@
 # Almacenamiento Azure
 Ejemplos de códigos para acceder a almacenes de datos Azure
 
-## SQL server + Apache Superset
+## RETO: SQL server + Apache Superset
 Lo primero es crear la BD SQL tal como se indica en el guión, incorporando los datos de ejemplo.
 
 La imagen de Superset del repositorio oficial no incluye controladores de acceso para la mayoría de las bases de datos que Superset acepta. Esto quiere decir que es necesario instalarlos. La mejor forma de hacerlo es creando una imagen de Superset a medida, basada en la oficial.
