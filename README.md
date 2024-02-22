@@ -18,11 +18,11 @@ En el menú de la izquierda seleccionar **Data storage** --> **Containers**. Des
 El notebook "**blobapi**" contiene un ejemplo de creación/borrado/uso de contenedores y blobs. 
 
 ## Carpetas compartidas
-En el menú de la izquierda seleccionar **Data storage** --> **File shares**. Crear una carpeta compartida (**+ File share**) con nombre **myfileshare**. **IMPORTANTE: en la sección Backup, deshabilitar la casilla "Enable backup"**.
+En el menú de la izquierda seleccionar **Data storage** --> **File shares**. Crear una carpeta compartida (**+ File share**) con nombre **ipmdfs**. **IMPORTANTE: en la sección Backup, deshabilitar la casilla "Enable backup"**.
 
 Una vez creado el recurso, podemos pulsar **Connect** y ver scripts de conexión para diferentes sistemas operativos. Si tenemos Windows 11, del script PowerShell podemos extraer estos datos:
 ```
-Carpeta compartida: \\ipmdsa.file.core.windows.net\myfileshare
+Carpeta compartida: \\ipmdsa.file.core.windows.net\ipmdfs
 Usuario: localhost\ipmdsa
 Contraseña: Ppxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx==
 ```
