@@ -1,8 +1,34 @@
 # Almacenamiento Azure
 Ejemplos de códigos para acceder a almacenes de datos Azure.
+En el portal, crear una storage account standard. Elegir 
+
+1. Grupo de recursos (o crear uno nuevo, **ipmdrg**)
+2. Nombre de la cuenta, **ipmdsa**
+3. Región **West Wurope**
+4. Rendimiento **Standard**
+5. Redundancia **LRS**
+
+Al crear la cuenta También podemos habilitar el espacio de nombres jerárquico, lo que hará que nuestro almacén de blobs se comporte como un **Data Lake**. 
 
 ## Almacén de blobs
+En el panel principal, donde pone **Blob service**, habilitar el acceso anónimo a blobs. Esto permitirá descargar blobs usando URLs. 
+
+En el menú de la izquierda seleccionar **Data storage** --> **Containers**. Desde allí, añadimos un contenedor con **+ Container**. Lo llamamos **ipmdcontainer**. Seleccionar acceso anónimo a cada blob de forma individual. Hecho esto, se puede usar el portal para subir ficheros como blobs. 
+
 El notebook "**blobapi**" contiene un ejemplo de creación/borrado/uso de contenedores y blobs. 
+
+## Carpetas compartidas
+En el menú de la izquierda seleccionar **Data storage** --> **File shares**. Crear una carpeta compartida (**+ File share**) con nombre **myfileshare**. **IMPORTANTE: en la sección Backup, deshabilitar la casilla "Enable backup"**.
+
+Una vez creado el recurso, podemos pulsar **Connect** y ver scripts de conexión para diferentes sistemas operativos. Si tenemos Windows 11, del script PowerShell podemos extraer estos datos:
+```
+Carpeta compartida: \\ipmdsa.file.core.windows.net\myfileshare
+Usuario: localhost\ipmdsa
+Contraseña: Ppxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx==
+```
+Para su uso en otros entornos necesitaremos el nombre de cuenta de acceso ("ipmdsa", sin "\adm") y la contraseña. 
+
+Es habitual que el acceso SMB esté limitado por el cortafuegos corporativo. Sin embargo, funcionará a través de una VPN. 
 
 ## Bases de datos Azure SQL
 El notebook "**sql**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pyodbc. Requiere un controlador ODBC, que en Windows viene pre-instalado. 
