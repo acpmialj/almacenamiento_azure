@@ -1,5 +1,5 @@
 # Almacenamiento Azure
-Ejemplos de códigos para acceder a almacenes de datos Azure
+Ejemplos de códigos para acceder a almacenes de datos Azure.
 
 ## Almacén de blobs
 El notebook "**blobapi**" contiene un ejemplo de creación/borrado/uso de contenedores y blobs. 
@@ -8,7 +8,7 @@ El notebook "**blobapi**" contiene un ejemplo de creación/borrado/uso de conten
 El notebook "**sql**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pyodbc. Requiere un controlador ODBC, que en Windows viene pre-instalado. 
 
 ## RETO: SQL server + Apache Superset
-Lo primero es crear la BD SQL tal como se indica en el guión, incorporando los datos de ejemplo. Es la misma base de datos usada en el notebook "sql". 
+Lo primero es crear la BD SQL tal como se indica en el guión, con autenticación mediante nombre de usuario / contraseña, e incorporando los datos de ejemplo. Es la misma base de datos usada en el notebook "sql". 
 
 La imagen de Superset del repositorio oficial (Docker Hub) no incluye controladores de acceso para la mayoría de las bases de datos que Superset acepta. Esto quiere decir que es necesario instalarlos. La mejor forma de hacerlo es creando una imagen de Superset a medida, basada en la oficial.
 
