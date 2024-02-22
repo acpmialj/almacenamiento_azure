@@ -4,7 +4,7 @@ En el portal, crear una storage account standard. Elegir
 
 1. Grupo de recursos (o crear uno nuevo, **ipmdrg**)
 2. Nombre de la cuenta, **ipmdsa**
-3. Región **West Wurope**
+3. Región **West Europe**
 4. Rendimiento **Standard**
 5. Redundancia **LRS**
 
