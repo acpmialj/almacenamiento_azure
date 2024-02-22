@@ -27,5 +27,14 @@ Desde Superset, es necesario añadir la base de datos. En los tipos ofrecidos, e
 ```
 mssql+pymssql://<Username>:<Password>@<database server>/<Database Name>
 ```
-
-
+Por ejemplo:
+```
+mssql+pymssql://ipmdadmin:xxxxxx@ipmdsqlserver.database.windows.net/ipmdsql
+```
+Hecha la conexión a la base de datos, se pueden realizar consultas SQL como, por ejemplo:
+```
+SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
+FROM SalesLT.ProductCategory pc
+JOIN SalesLT.Product p ON pc.productcategoryid = p.productcategoryid
+```
+Se puede guardar la consulta y representarla como una tabla. 
