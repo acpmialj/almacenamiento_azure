@@ -3,12 +3,15 @@ Ejemplos de códigos para acceder a almacenes de datos Azure.
 En el portal, crear una storage account standard. Elegir 
 
 1. Grupo de recursos (o crear uno nuevo, **ipmdrg**)
-2. Nombre de la cuenta, **ipmdsa**
-3. Región **West Europe**
-4. Rendimiento **Standard**
-5. Redundancia **LRS**
+2. Nombre de la cuenta de almacenamiento **ipmdsa**
+3. Región **(Europe) Spain Central**
+4. Primary service **Azure Blob Storage...**
+5. Rendimiento **Standard**
+6. Redundancia **LRS**
 
-Al crear la cuenta también podemos habilitar el espacio de nombres jerárquico, lo que hará que nuestro almacén de blobs se comporte como un **Data Lake**. 
+También podemos habilitar el espacio de nombres jerárquico (pestaña "Advanced"), lo que hará que nuestro almacén de blobs se comporte como un **Data Lake**. 
+
+Revisamos y creamos la cuenta. 
 
 ## Almacén de blobs
 En el panel principal, donde pone **Blob service**, habilitar el acceso anónimo a blobs. Esto permitirá descargar blobs usando URLs. 
