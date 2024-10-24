@@ -14,11 +14,20 @@ También podemos habilitar el espacio de nombres jerárquico (pestaña "Advanced
 Revisamos y creamos la cuenta. 
 
 ## Almacén de blobs
-En el panel principal, donde pone **Blob service**, habilitar el acceso anónimo a blobs. Esto permitirá descargar blobs usando URLs. 
+En el panel principal, donde pone **Blob service** (o **Data Lake Storage**), habilitar el acceso anónimo a blobs. Esto permitirá descargar blobs usando URLs. 
 
 En el menú de la izquierda seleccionar **Data storage** --> **Containers**. Desde allí, añadimos un contenedor con **+ Container**. Lo llamamos **ipmdcontainer**. Seleccionar acceso anónimo a cada blob de forma individual. Hecho esto, se puede usar el portal para subir ficheros como blobs. 
 
-El notebook "**blobapi**" contiene un ejemplo de creación/borrado/uso de contenedores y blobs. 
+El notebook "**blobapi**" contiene un ejemplo de creación/borrado/uso de contenedores y blobs. Prerrequsitos:
+```
+pip install azure-storage-blob
+pip install azure-identity
+```
+Además es necesario obtener un "connection string" usando la consola de Azure, ejecutando
+```
+az storage account show-connection-string --name "ipmdsa"
+```
+Donde "ipmdsa" es el nombre de la cuenta de almacenamiento. 
 
 ## Carpetas compartidas
 En el menú de la izquierda seleccionar **Data storage** --> **File shares**. Crear una carpeta compartida (**+ File share**) con nombre **ipmdfs**. **IMPORTANTE: en la sección Backup, deshabilitar la casilla "Enable backup"**.
@@ -29,7 +38,7 @@ Carpeta compartida: \\ipmdsa.file.core.windows.net\ipmdfs
 Usuario: localhost\ipmdsa
 Contraseña: Ppxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx==
 ```
-Para su uso en otros entornos necesitaremos el nombre de cuenta de acceso ("ipmdsa", sin "\adm") y la contraseña. 
+Para su uso en otros entornos necesitaremos el nombre de cuenta de acceso ("ipmdsa", sin "localhost\") y la contraseña. 
 
 Es habitual que el acceso SMB esté limitado por el cortafuegos corporativo. Sin embargo, funcionará a través de una VPN. 
 
