@@ -8,7 +8,7 @@ En el portal, crear una storage account standard. Elegir
 4. Rendimiento **Standard**
 5. Redundancia **LRS**
 
-Al crear la cuenta También podemos habilitar el espacio de nombres jerárquico, lo que hará que nuestro almacén de blobs se comporte como un **Data Lake**. 
+Al crear la cuenta también podemos habilitar el espacio de nombres jerárquico, lo que hará que nuestro almacén de blobs se comporte como un **Data Lake**. 
 
 ## Almacén de blobs
 En el panel principal, donde pone **Blob service**, habilitar el acceso anónimo a blobs. Esto permitirá descargar blobs usando URLs. 
