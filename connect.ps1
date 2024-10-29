@@ -1,7 +1,7 @@
 $connectTestResult = Test-NetConnection -ComputerName ipmdsa.file.core.windows.net -Port 445
 if ($connectTestResult.TcpTestSucceeded) {
     # Save the password so the drive will persist on reboot
-    cmd.exe /C "cmdkey /add:`"ipmdsa.file.core.windows.net`" /user:`"localhost\ipmdsa`" /pass:`"Fs...`""
+    cmd.exe /C "cmdkey /add:`"ipmdsa.file.core.windows.net`" /user:`"localhost\ipmdsa`" /pass:`"...`""
     # Mount the drive
     New-PSDrive -Name Z -PSProvider FileSystem -Root "\\ipmdsa.file.core.windows.net\ipmdfs" -Persist
 } else {

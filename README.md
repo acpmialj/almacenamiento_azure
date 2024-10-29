@@ -3,7 +3,7 @@ Ejemplos de códigos para acceder a almacenes de datos Azure.
 En el portal, crear una storage account standard. Elegir 
 
 1. Grupo de recursos (o crear uno nuevo, **ipmdrg**)
-2. Nombre de la cuenta de almacenamiento **ipmdsa**
+2. Nombre de la cuenta de almacenamiento **ipmdstorage**
 3. Región **(Europe) Spain Central**
 4. Primary service **Azure Blob Storage...**
 5. Rendimiento **Standard**
@@ -25,25 +25,27 @@ pip install azure-identity
 ```
 Además es necesario obtener un "connection string" usando la consola de Azure, ejecutando
 ```
-az storage account show-connection-string --name "ipmdsa"
+az storage account show-connection-string --name "ipmdstorage"
 ```
-Donde "ipmdsa" es el nombre de la cuenta de almacenamiento. 
+Donde "ipmdstorage" es el nombre de la cuenta de almacenamiento. 
 
 ## Carpetas compartidas
 En el menú de la izquierda seleccionar **Data storage** --> **File shares**. Crear una carpeta compartida (**+ File share**) con nombre **ipmdfs**. **IMPORTANTE: en la sección Backup, deshabilitar la casilla "Enable backup"**.
 
 Una vez creado el recurso, podemos pulsar **Connect** y ver scripts de conexión para diferentes sistemas operativos. Si tenemos Windows 11, del script PowerShell podemos extraer estos datos:
 ```
-Carpeta compartida: \\ipmdsa.file.core.windows.net\ipmdfs
-Usuario: localhost\ipmdsa
+Carpeta compartida: \\ipmdstorage.file.core.windows.net\ipmdfs
+Usuario: localhost\ipmdstorage
 Contraseña: Ppxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx==
 ```
-Para su uso en otros entornos necesitaremos el nombre de cuenta de acceso ("ipmdsa", sin "localhost\") y la contraseña. 
+Para su uso en otros entornos necesitaremos el nombre de cuenta de acceso ("ipmdstorage", sin "localhost\") y la contraseña. 
 
 Es habitual que el acceso SMB esté limitado por el cortafuegos corporativo. Sin embargo, funcionará a través de una VPN. 
 
 ## Bases de datos Azure SQL
-El notebook "**sql**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pyodbc. Requiere un controlador ODBC, que en Windows viene pre-instalado. 
+El notebook "**sql pyodbc**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pyodbc. Requiere un controlador ODBC, que en Windows viene pre-instalado. 
+
+El notebook "**sql mymssql**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pymssql. No requiere un controlador ODBC. 
 
 ## RETO: SQL server + Apache Superset
 Lo primero es crear la BD SQL tal como se indica en el guión, con autenticación mediante nombre de usuario / contraseña, e incorporando los datos de ejemplo. Es la misma base de datos usada en el notebook "sql". 
