@@ -45,7 +45,7 @@ Es habitual que el acceso SMB esté limitado por el cortafuegos corporativo. Sin
 ## Bases de datos Azure SQL
 El notebook "**sql pyodbc**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pyodbc. Requiere un controlador ODBC, que en Windows viene pre-instalado. 
 
-El notebook "**sql mymssql**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pymssql. No requiere un controlador ODBC. 
+El notebook "**sql pymssql**" contiene un ejemplo de consultas sobre una BD Microsoft SQL Azure, usando pymssql. No requiere un controlador ODBC. 
 
 ## RETO: SQL server + Apache Superset
 Lo primero es crear la BD SQL tal como se indica en el guión, con autenticación mediante nombre de usuario / contraseña, e incorporando los datos de ejemplo. Es la misma base de datos usada en el notebook "sql". 
